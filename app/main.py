@@ -13,7 +13,7 @@ def move_file(command: str) -> None:
     for index in range(len(dirs)):
         try:
             os.mkdir("/".join(dirs[:index + 1]))
-        except Exception as e:
+        except Exception:
             continue
     try:
         with (open(file_name1, "r") as source_file,
